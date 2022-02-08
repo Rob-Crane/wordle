@@ -241,6 +241,11 @@ Word fromString(const std::string &str) {
   return word;
 }
 
+/**
+ * TODO: Implement a solver based on minimizing expected number of guesses:
+ *  = 1 * P(g1 = ans) + 2 * P(g2 = ans | g1) + 3 * P(g3 = ans | g1, g2) + ...
+ */
+
 void run() {
   WordList non_answer_entries = loadWordFile(kValidEntryFile);
   WordList entries = loadWordFile(kAnswerFile);
